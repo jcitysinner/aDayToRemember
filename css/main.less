@@ -1,21 +1,130 @@
 @import 'styles/brand.less';
 @import 'styles/typography.less';
 @import 'styles/grid.less';
+@import 'styles/mixins.less';
+@import: 'mixins.less';
+
+body{
+	background-color: @color1;	
+}
 
 .container {
+  .centered;
   width: 960px;
-  margin: 0 auto;
   overflow: hidden;
 }
-
+.headerFull{
+	background-color: @color3;
+	border-top: solid 15px @color1;
+	border-bottom: solid 15px @color1;
+}
 header {
   .column(12);
+  
+  padding: 25px 0;
+  h1{
+  	a{
+  		color: @color4;
+  	}
+  	&:visted{
+  		color: @color4;
+  	}
+  }
+  nav{
+  	ul{
+  		margin-top: 25px;
+  		li{
+  			display: inline;
+  			margin-right: 25px;
+  			a{
+  				color: @color4;
+  			}
+  			&:visted{
+		  		color: @color4;
+		  	}
+  		}
+  	}
+  }
 }
 
+.bodyFull{
+	background-color: @color2;
+	padding: 25px 0;
+}
 article#maincolumn {
-  .column(8);
+  .column(9);
+  clear: both;
+  	img{
+  		float: right;
+  		margin: 0 10px;
+  	}
 }
 
-sidebar#sidebar {
-  .column(4);
+section#sidebar {
+  .column(3);
+  ul{
+  	.bottomMargin;
+  	li{
+  		.bottomMargin;
+  	}
+  }
+}
+
+#albumMain{
+	.column(12);
+	img{
+  		float: right;
+  		margin: 0 10px;
+  	}
+  	ol{
+  		.bottomMargin;
+  		li{
+  			margin-bottom: 5px;
+  		}
+  	}
+}
+
+.centeredText{
+	text-align: center;
+	margin: 15px 0;
+	display: block;
+}
+
+#tourLeft{
+	.column(6);
+	ul{
+  	.bottomMargin;
+  	li{
+  		.bottomMargin;
+  	}
+  }
+}
+#tourRight{
+	.column(6);	
+	img{
+		.boxShadow();
+		.bottomMargin;
+	}
+}
+
+footer{
+	padding: 25px;
+	.column(12);
+	text-align: center;
+
+	ul{
+		li{
+			display: inline;
+  			margin-right: 25px;
+			a{
+				color: @color4;
+			}
+
+		}
+	}
+	p{
+		color: @color4;
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
 }

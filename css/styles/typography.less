@@ -1,31 +1,40 @@
 @import: 'brand.less';
+@import: 'mixins.less';
 
 body {
   font-family: @bodyfontfamily;
 }
 
 p {
-  
+  margin: 10px 0px;
 }
 
 h1 {
-  font-family: @headingfontfamily;
-  font-size: @basefontsize * 2; // Insert number that will resize accordingly based on stylesheet. 
+  font-family: @titleFontFamily;
+  font-size: 28px;
+  text-transform:uppercase;
 }
 
 h2 {
   font-family: @headingfontfamily;
-  font-size: @basefontsize * 2; // Insert number that will resize accordingly based on stylesheet. 
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: @color6;
 }
 
 h3 {
   font-family: @headingfontfamily;
-  font-size: @basefontsize * 2; // Insert number that will resize accordingly based on stylesheet. 
+  font-size: 18px;
+  .bottomMargin;
+  color: @color7;
 }
 
 a {
-  //insert styling
+  color: @color5;
+  text-decoration: none;
+  transition: all 0.5s;
   &:hover {
-    //insert styling
+    color: @color1;
   }
+
 }
